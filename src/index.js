@@ -5,7 +5,6 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import "./styling/root.css";
 import Root from "./routes/root";
 import App from "./routes/app";
 import Resistor from "./routes/resistor";

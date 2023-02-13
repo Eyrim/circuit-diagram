@@ -5,7 +5,8 @@ import "../styling/resistor-page.css";
 export default class Resistor extends React.Component {
     // Stores resistor data used to populate page
     #data = {
-        circuitSymbol: "https://raw.githubusercontent.com/Eyrim/circuit-sharp/main/wwwroot/GenericData/Imgs/genericResistor.png",
+        iecSymbol: "images/circuit-symbols/resistor-iec.png",
+        nemaSymbol: "images/circuit-symbols/resistor-nema.png",
     };
 
     render() {
@@ -18,8 +19,11 @@ export default class Resistor extends React.Component {
                 The resistor is an electrical component that limits the flow of current, acting as a load.
             </h2>
 
-            The circuit symbol for a resistor looks as follows:
-            <img src={this.#data.circuitSymbol} />
+            The IEC circuit symbol for a resistor looks as follows:
+            <img src={this.#data.iecSymbol} alt="The IEC circuit symbol for a resistor"/>
+            <br />
+            The NEMA circuit symbol for a resistor looks as follows:
+            <img src={this.#data.nemaSymbol} alt="The NEMA circuit symbol for a resistor"/>
         </div>;
     }
 }
