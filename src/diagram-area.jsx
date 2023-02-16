@@ -5,6 +5,8 @@ import ReactDOM from "react-dom/client";
 import "./styling/app.css"
 
 export default class DiagramArea extends React.Component {
+    // {this.props.selectedComponent}
+
     render() {
         return <div id="diagram-area" className="diagram-area" onClick={this.#handleClick}>a</div>;
     }
@@ -12,7 +14,5 @@ export default class DiagramArea extends React.Component {
     #handleClick(e) {
         let pageX = e.pageX;
         let pageY = e.pageY;
-
-        
     }
 }
