@@ -6,13 +6,24 @@ import "./styling/app.css"
 
 export default class DiagramArea extends React.Component {
     // {this.props.selectedComponent}
+    constructor(props) {
+        super(props);
+    }
 
     render() {
-        return <div id="diagram-area" className="diagram-area" onClick={this.#handleClick}>a</div>;
+        return <div id="diagram-area" className="diagram-area" onClick={this.#handleClick}>
+            {this.props.componentarray}aa
+        </div>;
+    }
+
+    componentDidUpdate() {
+        console.log("update");
     }
 
     #handleClick(e) {
         let pageX = e.pageX;
         let pageY = e.pageY;
+        //console.log(this.props.componentarray);
+        console.log("AAAAAAAAA");
     }
 }
