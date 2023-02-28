@@ -16,10 +16,6 @@ export default class DiagramArea extends React.Component {
         </div>;
     }
 
-    componentDidUpdate() {
-        console.log("update");
-    }
-
     #handleClick(e) {
         let pageX = e.pageX;
         let pageY = e.pageY;
