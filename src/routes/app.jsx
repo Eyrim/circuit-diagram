@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
         // rendered by diagram-area
         // Create a new component object and push it to state
-        this.state.componentArray.push(<Component xpos={e.clientX} ypos={e.clientY} symbolpath={symbolPath} componentname={clickedComponentName} key={componentId}></Component>);
+        this.state.componentArray.push(<Component xPos={e.clientX} yPos={e.clientY} symbolPath={symbolPath} componentName={clickedComponentName} key={componentId}></Component>);
         // a copy of the array held in state (updating the array doesn't update state therefore children won't update)
         let compArr = [...this.state.componentArray];
         // push to state

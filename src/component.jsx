@@ -1,8 +1,9 @@
 import React from "react";
 
+
 // Electrical component
 export default class Component extends React.Component  {
-    constructor() {
+    constructor(xPos, yPos, symbolpath, componentName) {
         super();
 
         this.state = {
@@ -15,10 +16,10 @@ export default class Component extends React.Component  {
 
     componentDidMount() {
         this.setState({
-            xPos: this.props.xpos,
+            xPos: this.props.xPos,
             yPo: this.props.yPos,
-            symbolPath: this.props.symbolpath,
-            componentName: this.props.componentname
+            symbolPath: this.props.symbolPath,
+            componentName: this.props.componentName
         });
     }
 
