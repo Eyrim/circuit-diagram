@@ -1,16 +1,15 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import "../styling/resistor-page.css";
 
-export default class Resistor extends React.Component {
-    // Stores resistor data used to populate page
-    #data = {
+
+export default function Resistor(props) {
+    const [data, setData] = useState({
         iecSymbol: "images/circuit-symbols/resistor-iec.png",
         nemaSymbol: "images/circuit-symbols/resistor-nema.png",
-    };
+    });
 
-    render() {
-        return <div>
+    return <div>
             <h1>
                 The resistor
             </h1>
@@ -20,10 +19,9 @@ export default class Resistor extends React.Component {
             </h2>
 
             The IEC circuit symbol for a resistor looks as follows:
-            <img src={this.#data.iecSymbol} alt="The IEC circuit symbol for a resistor"/>
+            <img src={data.iecSymbol} alt="The IEC circuit symbol for a resistor"/>
             <br />
             The NEMA circuit symbol for a resistor looks as follows:
-            <img src={this.#data.nemaSymbol} alt="The NEMA circuit symbol for a resistor"/>
+            <img src={data.nemaSymbol} alt="The NEMA circuit symbol for a resistor"/>
         </div>;
-    }
 }
